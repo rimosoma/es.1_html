@@ -7,15 +7,9 @@
         <meta name = "keywords" content = "curriculum vitae Simone Romano" lang="it">
         <meta name = "language" content = "IT">
         <meta charset="utf-8">
-        <meta http-equiv="refresh" content="30">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
         <title>STUDENTE</title>
-        <link rel="Curriculum" href="es1Curr.html">
         <link rel="icon" type="image/png" href="../es.1/multimedia/francesco.png">
-
-
-
-
 
         <style>
             body{
@@ -42,6 +36,19 @@
                 padding: 20px;
                 text-align: center;
             }
+            table {
+                margin: auto;
+                text-align: center;
+                border-spacing: 10px;
+                width: 100%;
+                table-layout: fixed;
+            }
+
+            table th,td {
+                padding: 20px;
+                width: 25%;
+                
+            }
 
             ul,ol{
                 text-align: left;
@@ -56,7 +63,8 @@
     <body>
         <header>
             <a href="../es.1/es1Stud.html">HOME</a> <br>
-            <a href="../es.1/es1Curr.html">CURRICULUM_VITAE</a>
+            <a href="../es.1/es1Curr.html">CURRICULUM_VITAE</a> <br>
+            <a href="../es.1/es2TabVoti.html">TABELLA VOTI</a>
 
         </header>
         <hr
@@ -80,6 +88,7 @@
                     <th>La mia canzone preferita</th>
                     <th>Il mio video preferito</th>
                     <th>Immagine cliccabile!</th>
+                    <th>Grafica SVG!!</th>
                 </tr>
                 <tr>
                     <td>
@@ -90,33 +99,64 @@
                         </audio>
                     </td>
                     <td> 
-                        <iframe  width="200" height="150"
-                        src="https://www.youtube.com/embed/8unDAPuGilo?autoplay=1&loop=1&playlist=8unDAPuGilo&controls=0">
-                        </iframe>
+                        <video width="400" height="250" controls loop>
+                            <source src="../es.1/multimedia/movie.mp4" type="video/mp4">
+                            Your browser does not support the VIDEO tag.
+                        </video>
                     </td>
                     <td>
                         <img src="../es.1/multimedia/colori.png" alt="colori" usemap="#nomicolori" width="100" height="100"/>
                         <map name="nomicolori">
-                            <area shape="rect" coords="0,0,50,100" alt="blue" href="blue.html"/>
-                            <area shape="circle" coords="75,25,25" alt="red" href="red.html"/>
-                            <area shape="circle" coords="75,75,25" alt="green" href="green.html"/>
-                            <area shape="default" alt="white" href="white.html"/>
+                            <area shape="rect" coords="0,0,50,100" alt="blue" href="https://it.wikipedia.org/wiki/Blu"/>
+                            <area shape="circle" coords="75,25,25" alt="red" href="https://it.wikipedia.org/wiki/Rosso"/>
+                            <area shape="circle" coords="75,75,25" alt="green" href="https://it.wikipedia.org/wiki/Verde"/>
+                            <area shape="default" alt="white" href="https://it.wikipedia.org/wiki/Bianco"/>
                         </map>
                     </td>
+                    <td>
+                        <svg width="100" height="100">
+                            <rect x="15" y="15" width="80" height="60" stroke="black" stroke-width="3" fill="yellow"/>
+                            <line x1="15" y1="15" x2="95" y2="75" stroke="blue" stroke-width="3"/>
+                            <line x1="15" y1="75" x2="95" y2="15" stroke="blue" stroke-width="3"/>
+                            <text fill="black" font-size="90%" font-family="Verdana" x=17 y= 30>HTML-SVG</text>
+
+                        </svg>
+                </tr>
+                <tr>
+                    <th>Un video utile!</th>
+                </tr>
+                <tr>
+                    <td>
+                        <iframe width="400" height="250" 
+                        src="https://www.youtube.com/embed/YRlsKsU3W4c" 
+                        title="3 EASY Effects You Should Use Right Now! (After Effects Tutorial)" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                        </iframe>
+                    </td>
+                    
+
+
                 </tr>
             </table>
 
         </details>
 
-
-       
-        
         <hr>
         <footer>
             <h5>CONTATTI</h5>
             <p>Simone Romano : s777777@studenti.polito.it </p>
-        </footer>
+            <img src="https://upload.wikimedia.org/wikipedia/it/2/27/Politecnico_di_Torino_-_Logo.svg" alt="logofoot" usemap="#logoPolito" width="100" height="100">
+            <map name="logoPolito">
+                <area shape="circle" coords="50,80,15" alt="toro" href="http://www.comune.torino.it/"/>
+                <area shape="default" alt="polito" href="https://www.polito.it/"/>
+            </map>        </footer>
 
     </body>
 
 </html>
+
+
+
