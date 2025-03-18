@@ -14,19 +14,25 @@
     <body>
 
         <header>
+          
+            <br>
+            <br>
             <a href="../es.1/es1Stud.html">HOME</a> <br>
             <a href="../es.1/es1Curr.html">CURRICULUM_VITAE</a> <br>
             <a href="../es.1/es2TabVoti.html">TABELLA VOTI</a>
+            <br>
+            <br>
+            <br>
         </header>
         <hr>
 
 
 
         <h1>ESERCIZIO 1 CURRICULUM_VITAE</h1>
-        <br>
         <p>Ecco qui un mio curriculum esemplificativo</p>
+
+        <h2>ESPERIENZE LAVORATIVE E NON:</h2>
         <br>
-        <h2>ESPERIENZE LAVORATIVE e NON:</h2>
         <ol type="I">
             <li>2021-2024: Lavoro come fattorino presso svariate pizzerie</li>
             <li>2021-2023: Dato ripetizioni a circa 30 studenti di scuole superiori in matematica</li>
@@ -74,7 +80,7 @@
             </ul>
         </div>
 
-        <img src="../es.1/multimedia/logo_html5.png" width="100" height="100" alt="logo_html5">
+        <img class="logo" src="../es.1/multimedia/logo_html5.png" width="100" height="100" alt="logo_html5">
 
         <hr>
         <footer>
@@ -86,6 +92,15 @@
                 <area shape="default" alt="polito" href="https://www.polito.it/"/>
             </map>
         </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var h2Elements = document.querySelectorAll("h2");
+                h2Elements.forEach(function(h2, index) {
+                    h2.textContent = (index + 1) + ". " + h2.textContent;
+                });
+            });
+        </script>
 
     </body>
 

@@ -15,14 +15,22 @@
 
     <body>
         <header>
+            <br>
+            <br>
             <a href="../es.1/es1Stud.html">HOME</a> <br>
             <a href="../es.1/es1Curr.html">CURRICULUM_VITAE</a> <br>
             <a href="../es.1/es2TabVoti.html">TABELLA VOTI</a>
+            <br>
+            <br>
+            <br>
 
         </header>
         <hr>
-
+        <br>
         <h1>ESERCIZIO 2 TABELLA VOTI</h1>
+        <br>
+        <br>
+        <br>
         <table class="tabellaVoti">
             <tr><th>Materia</th><th>Crediti</th><th>Voto</th> </tr>
             <tr></tr>
@@ -47,6 +55,9 @@
         </table>
 
 
+        <br>
+        <br>
+        <br>
 
         <hr>
         <footer>
@@ -62,7 +73,23 @@
 
 
 
-
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var rows = document.querySelectorAll(".tabellaVoti tr");
+        
+                rows.forEach(function(row) {
+                    var cells = row.querySelectorAll("td");
+                    if (cells.length > 0) {
+                        var voto = parseInt(cells[cells.length - 1].textContent);
+                        if (voto < 22) {
+                            row.classList.add("voto-basso");
+                        } else {
+                            row.classList.add("voto-alto");
+                        }
+                    }
+                });
+            });
+        </script>
 
 
 
