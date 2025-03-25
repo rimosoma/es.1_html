@@ -22,7 +22,7 @@ p::after{content: "*rimosoma copyright*" attr(data-content); font-size: 40%; col
 
 h1{
     background-color: white;
-    max-width: 600px;
+    max-width: 80%;
     color: black;
     padding: 10px;
     border: 2px solid fuchsia; /* Bordo attorno al rettangolo */
@@ -37,7 +37,7 @@ h1{
 }
 
 h2{
-    max-width: 400px;
+    max-width: 60%
     padding: 20px;
     background-color: white;
     color: black;
@@ -77,7 +77,6 @@ header{
     align-items: center;
     grid-area: menuNav;
     width: 100%; /* Ensure it takes the full width */
-    max-width: 200px; /* Set a maximum width */
     padding: 10px;
     background-color: rgb(172, 71, 255);
     box-sizing: border-box; /* Include padding in the element's total width and height */
@@ -207,6 +206,23 @@ a:active {
     background-color: red; /* Change background color on click */
 }
 
+a:focus, a:active {
+    outline: 2px solid yellow; /* Highlight links when focused or active */
+    background-color: darkblue; /* Change background color when focused or active */
+}
+
+img:focus, img:active {
+    outline: 2px solid yellow; /* Highlight images when focused or active */
+}
+
+details:focus, details:active {
+    outline: 2px solid yellow; /* Highlight details when focused or active */
+}
+
+audio:focus, audio:active, video:focus, video:active, iframe:focus, iframe:active {
+    outline: 2px solid yellow; /* Highlight media elements when focused or active */
+}
+
 .gridContainer{
     display: grid;
     grid-template-areas: 
@@ -222,3 +238,35 @@ a:active {
     box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
+
+/* for small screen */
+@media only screen and (max-width: 768px) {
+    .gridContainer {
+        grid-template-areas: 
+            "header"
+            "menuNav"
+            "contenuto"
+            "footer";
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    [class*="col-"] { 
+        width: 100%; 
+    }
+}
+
+@media print {
+    body { color: black; font-family: Times, serif; }
+    .gridContainer {
+        grid-template-areas: 
+            "header"
+            "menuNav"
+            "contenuto"
+            "footer";
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+    
+    [class*="col-"] { 
+        width: 100%; 
+    }
+   }

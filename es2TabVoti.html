@@ -17,9 +17,9 @@
         <header>
             <br>
             <br>
-            <a href="../es.1/es1Stud.html">HOME</a> <br>
-            <a href="../es.1/es1Curr.html">CURRICULUM_VITAE</a> <br>
-            <a href="../es.1/es2TabVoti.html">TABELLA VOTI</a>
+            <a href="../es.1/es1Stud.html" tabindex="1" onclick="readOutLoud('HOME')">HOME</a> <br>
+            <a href="../es.1/es1Curr.html" tabindex="2" onclick="readOutLoud('CURRICULUM_VITAE')">CURRICULUM_VITAE</a> <br>
+            <a href="../es.1/es2TabVoti.html" tabindex="3" onclick="readOutLoud('TABELLA VOTI')">TABELLA VOTI</a>
             <br>
             <br>
             <br>
@@ -63,10 +63,10 @@
         <footer>
             <h5>CONTATTI</h5>
             <p>Simone Romano : s777777@studenti.polito.it </p>
-            <img src="https://upload.wikimedia.org/wikipedia/it/2/27/Politecnico_di_Torino_-_Logo.svg" alt="logofoot" usemap="#logoPolito" width="100" height="100">
+            <img src="https://upload.wikimedia.org/wikipedia/it/2/27/Politecnico_di_Torino_-_Logo.svg" alt="logo Politecnico di Torino" usemap="#logoPolito" width="100" height="100" tabindex="4">
             <map name="logoPolito">
-                <area shape="circle" coords="50,80,15" alt="toro" href="http://www.comune.torino.it/"/>
-                <area shape="default" alt="polito" href="https://www.polito.it/"/>
+                <area shape="circle" coords="50,80,15" alt="toro" href="http://www.comune.torino.it/" tabindex="5">
+                <area shape="default" alt="polito" href="https://www.polito.it/" tabindex="6">
             </map>
 
         </footer>
@@ -89,6 +89,11 @@
                     }
                 });
             });
+
+            function readOutLoud(text) {
+                var speech = new SpeechSynthesisUtterance(text);
+                window.speechSynthesis.speak(speech);
+            }
         </script>
 
 

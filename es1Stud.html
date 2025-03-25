@@ -17,9 +17,9 @@
         <header>
             <br>
             <br>
-            <a href="../es.1/es1Stud.html">HOME</a> <br>
-            <a href="../es.1/es1Curr.html">CURRICULUM_VITAE</a> <br>
-            <a href="../es.1/es2TabVoti.html">TABELLA VOTI</a>
+            <a href="../es.1/es1Stud.html" tabindex="1" onclick="readOutLoud('HOME')">HOME</a> <br>
+            <a href="../es.1/es1Curr.html" tabindex="2" onclick="readOutLoud('CURRICULUM_VITAE')">CURRICULUM_VITAE</a> <br>
+            <a href="../es.1/es2TabVoti.html" tabindex="3" onclick="readOutLoud('TABELLA VOTI')">TABELLA VOTI</a>
             <br>
             <br>
             <br>
@@ -30,18 +30,18 @@
 
         <h1>ESERCIZIO 1 DESCRIZIONE STUDENTE</h1>
        
-        <p>nome & cognome : Simone Romano <br> nato a : <a href="https://www.comune.rivoli.to.it/"> Rivoli(TO)   </a><br> il : 24/03/2003</p>
+        <p>nome & cognome : Simone Romano <br> nato a : <a href="https://www.comune.rivoli.to.it/" tabindex="4", onclick="readOutLoud('RIVOLI CAPITALE DITALIA')"> Rivoli(TO)   </a><br> il : 24/03/2003</p>
        
 
         
 
         <figure>
-            <img src="../es.1/multimedia/gio.png" width="100" height="100" alt="faccina">
+            <img src="../es.1/multimedia/gio.png" width="100" height="100" alt="faccina" tabindex="5">
             <figcaption>Adottato</figcaption>
         </figure>
 
-        <details>
-            <summary>FATTI SORPRENDERE!</summary>
+        <details tabindex="6">
+            <summary onclick="readOutLoud('FATTI SORPRENDERE UUUUU')">FATTI SORPRENDERE! </summary>
             <table>
                 <tr>
                     <th>La mia canzone preferita</th>
@@ -51,29 +51,29 @@
                 </tr>
                 <tr>
                     <td>
-                        <audio controls>
+                        <audio controls tabindex="7">
                 
                             <source src="../es.1/multimedia/ciao.mp3" type="audio/mpeg">
                             Your browser does not support the AUDIO tag.
                         </audio>
                     </td>
                     <td> 
-                        <video width="400" height="250" controls loop>
+                        <video width="400" height="250" controls loop tabindex="8">
                             <source src="../es.1/multimedia/movie.mp4" type="video/mp4">
                             Your browser does not support the VIDEO tag.
                         </video>
                     </td>
                     <td>
-                        <img src="../es.1/multimedia/colori.png" alt="colori" usemap="#nomicolori" width="100" height="100"/>
+                        <img src="../es.1/multimedia/colori.png" alt="colori" usemap="#nomicolori" width="100" height="100" tabindex="9"/>
                         <map name="nomicolori">
-                            <area shape="rect" coords="0,0,50,100" alt="blue" href="https://it.wikipedia.org/wiki/Blu"/>
-                            <area shape="circle" coords="75,25,25" alt="red" href="https://it.wikipedia.org/wiki/Rosso"/>
-                            <area shape="circle" coords="75,75,25" alt="green" href="https://it.wikipedia.org/wiki/Verde"/>
-                            <area shape="default" alt="white" href="https://it.wikipedia.org/wiki/Bianco"/>
+                            <area shape="rect" coords="0,0,50,100" alt="blue" href="https://it.wikipedia.org/wiki/Blu" tabindex="10"/>
+                            <area shape="circle" coords="75,25,25" alt="red" href="https://it.wikipedia.org/wiki/Rosso" tabindex="11"/>
+                            <area shape="circle" coords="75,75,25" alt="green" href="https://it.wikipedia.org/wiki/Verde" tabindex="12"/>
+                            <area shape="default" alt="white" href="https://it.wikipedia.org/wiki/Bianco" tabindex="13"/>
                         </map>
                     </td>
                     <td>
-                        <svg width="100" height="100">
+                        <svg width="100" height="100" tabindex="14">
                             <rect x="15" y="15" width="80" height="60" stroke="black" stroke-width="3" fill="yellow"/>
                             <line x1="15" y1="15" x2="95" y2="75" stroke="blue" stroke-width="3"/>
                             <line x1="15" y1="75" x2="95" y2="15" stroke="blue" stroke-width="3"/>
@@ -92,7 +92,7 @@
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
+                        allowfullscreen tabindex="15">
                         </iframe>
                     </td>
                     
@@ -107,12 +107,17 @@
         <footer>
             <h5>CONTATTI</h5>
             <p>Simone Romano : s777777@studenti.polito.it </p>
-            <img src="https://upload.wikimedia.org/wikipedia/it/2/27/Politecnico_di_Torino_-_Logo.svg" alt="logofoot" usemap="#logoPolito" width="100" height="100">
+            <img src="https://upload.wikimedia.org/wikipedia/it/2/27/Politecnico_di_Torino_-_Logo.svg" alt="logo Politecnico di Torino" usemap="#logoPolito" width="100" height="100" tabindex="16">
             <map name="logoPolito">
-                <area shape="circle" coords="50,80,15" alt="toro" href="http://www.comune.torino.it/"/>
-                <area shape="default" alt="polito" href="https://www.polito.it/"/>
+                <area shape="circle" coords="50,80,15" alt="toro" href="http://www.comune.torino.it/" tabindex="17", onclick="readOutLoud('COMUNE IN DIFFICOLTA')"/>
+                <area shape="default" alt="polito" href="https://www.polito.it/" tabindex="18", onclick="readOutLoud('ATENEO POLITECNICO')"/>
             </map>        </footer>
-
+        <script>
+            function readOutLoud(text) {
+                var speech = new SpeechSynthesisUtterance(text);
+                window.speechSynthesis.speak(speech);
+            }
+        </script>
     </body>
 
 </html>

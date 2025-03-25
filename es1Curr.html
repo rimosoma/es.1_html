@@ -19,9 +19,9 @@
             <hr>
 
             <div class="menuNav">
-                <a href="../es.1/es1Stud.html">HOME</a> <br>
-                <a href="../es.1/es1Curr.html">CURRICULUM_VITAE</a> <br>
-                <a href="../es.1/es2TabVoti.html">TABELLA VOTI</a>
+                <a href="../es.1/es1Stud.html" tabindex="1" onclick="readOutLoud('HOME')">HOME</a> <br>
+                <a href="../es.1/es1Curr.html" tabindex="2" onclick="readOutLoud('CURRICULUM_VITAE')">CURRICULUM_VITAE</a> <br>
+                <a href="../es.1/es2TabVoti.html" tabindex="3" onclick="readOutLoud('TABELLA VOTI')">TABELLA VOTI</a>
             </div>
         
             <div class="contenuto">
@@ -42,8 +42,8 @@
 
                 <h2>FORMAZIONE:</h2>
                 <ul>
-                    <li>2018-2023: Diploma di maturità in Chimica e Biotecnologie ambientali presso l'Istituto "<a href="https://www.iissantorre.edu.it/" >Santorre di Santarosa</a>" di Torino   </li>
-                    <li>2023-2027: Studente in Ingegneria Gestionale presso il <a href="https://www.polito.it/"> Politecnico di Torino</a>   </li>
+                    <li>2018-2023: Diploma di maturità in Chimica e Biotecnologie ambientali presso l'Istituto "<a href="https://www.iissantorre.edu.it/" tabindex="4">Santorre di Santarosa</a>" di Torino   </li>
+                    <li>2023-2027: Studente in Ingegneria Gestionale presso il <a href="https://www.polito.it/" tabindex="5"> Politecnico di Torino</a>   </li>
                 </ul>
 
                 <h2>COMPETENZE:</h2>
@@ -76,17 +76,17 @@
                     </ul>
                 </div>
 
-                <img class="logo" src="../es.1/multimedia/logo_html5.png" width="100" height="100" alt="logo_html5">
+                <img class="logo" src="../es.1/multimedia/logo_html5.png" width="100" height="100" alt="logo HTML5" tabindex="6">
             </div>
 
             <hr>
             <footer>
                 <h5>CONTATTI</h5>
                 <p>Simone Romano : s777777@studenti.polito.it </p>
-                <img src="https://upload.wikimedia.org/wikipedia/it/2/27/Politecnico_di_Torino_-_Logo.svg" alt="logofoot" usemap="#logoPolito" width="100" height="100">
+                <img src="https://upload.wikimedia.org/wikipedia/it/2/27/Politecnico_di_Torino_-_Logo.svg" alt="logo Politecnico di Torino" usemap="#logoPolito" width="100" height="100" tabindex="7">
                 <map name="logoPolito">
-                    <area shape="circle" coords="50,80,15" alt="toro" href="http://www.comune.torino.it/"/>
-                    <area shape="default" alt="polito" href="https://www.polito.it/"/>
+                    <area shape="circle" coords="50,80,15" alt="toro" href="http://www.comune.torino.it/" tabindex="8">
+                    <area shape="default" alt="polito" href="https://www.polito.it/" tabindex="9">
                 </map>
             </footer>
         </div>
@@ -98,6 +98,11 @@
                     h2.textContent = (index + 1) + ". " + h2.textContent;
                 });
             });
+
+            function readOutLoud(text) {
+                var speech = new SpeechSynthesisUtterance(text);
+                window.speechSynthesis.speak(speech);
+            }
         </script>
 
     </body>
